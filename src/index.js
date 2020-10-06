@@ -1,33 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
-const names = ["Joe","Biden","Trump"];
-
+import Card from './components/Card';
 
 
-function App() {
-    return (
-        <div className="container">
-            <h1>First Component</h1>
-            {names.map(names => (<h1>{names}</h1>))}
-            <ul>
-                <li>Ahmet</li>
-                <li>Veli</li>
-                <li>Deniz</li>
-            </ul>
+class App extends Component {
+    render() {
+        return (
+            <div className="container" style={{display:'flex',marginTop:'10px', justifyContent:'center',alignItems:'center'}}>
+                <div className='card-container' >
+                    <Card title="Space X" />
+                    <Card title="Globalized" />
+                    <Card title="Lagari" />
+                </div>
 
-            <button type='button' style={
-                {backgroundColor:'red', color:'white',borderRadius:'20px',weight:'32px',height:'32px'}}>Name Find</button> 
-
-        </div>
-        
-        
-    )
+            </div>
+        )
+    }
 }
 
 
 
-
 ReactDOM.render(
-    <App /> , document.getElementById('root')
+    <App />, document.getElementById('root')
 );
