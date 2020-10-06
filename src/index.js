@@ -1,41 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const names = ["Joe","Barack","Trump"];
+const names = ["Joe","Biden","Trump"];
+
 
 
 function App() {
     return (
-        <div>
-            {names.map(names =>(<h1>{names}</h1>))}
-        <ul>
+        <div className="container">
+            <h1>First Component</h1>
+            {names.map(names => (<h1>{names}</h1>))}
+            <ul>
+                <li>Ahmet</li>
+                <li>Veli</li>
+                <li>Deniz</li>
+            </ul>
 
-            <li>
-                Ayşe
-            </li>
-            <li>
-                Mehmet
-            </li>
-            <li>
-                Ali
-            </li>
-        </ul>
+            <button type='button' style={
+                {backgroundColor:'red', color:'white',borderRadius:'20px',weight:'32px',height:'32px'}}>Name Find</button> 
+
         </div>
         
-    );
-    // const name='Functional Component'
-    // return <h1>{name}</h1>
+        
+    )
 }
 
-// class App extends React.Component {
-//     render() {
-//         return (
-//             <h1>Deneme</h1>
-//         )
-//     }
-// }
 
 
-ReactDOM.render (
+
+ReactDOM.render(
     <App /> , document.getElementById('root')
 );
