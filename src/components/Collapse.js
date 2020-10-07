@@ -13,7 +13,7 @@ const Collapse = (props) => {
             </p>
             <div className="collapse" id={props.href}>
                 <div className="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    {props.children}
                 </div>
             </div>
         </div>

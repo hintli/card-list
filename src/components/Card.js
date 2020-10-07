@@ -1,11 +1,11 @@
 import React from 'react';
-
+import propTypes from 'prop-types';
 
 const Card = (props) => {
 
     return (
        
-            <div className="card-group">
+            <div className="card-group w-100">
                 <div className="card" style={{backgroundColor:'red', color:'white', margin:'15px'}}>
                     <img src={props.image} className="card-img-top" alt="..." />
                     <div className="card-body">
@@ -17,6 +17,14 @@ const Card = (props) => {
             </div>
        
     )
+}
+
+Card.propTypes = {
+    title: propTypes.string.isRequired
+}
+
+Card.defaultProps = {
+    title: "deneme"
 }
 
 
